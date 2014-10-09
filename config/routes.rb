@@ -1,5 +1,6 @@
 R2SampleApp::Application.routes.draw do
-  get "users/new"
+  resources :users
+  # get "users/new" --> No longer necessary since resources accounts for all 4 RESTful Users Resources
   root 'static_pages#home'
   match '/signup',  to: 'users#new',            via: 'get'
   match '/help',    to: 'static_pages#help',    via: 'get'

@@ -33,4 +33,7 @@ R2SampleApp::Application.configure do
 
   # Print deprecation notices to the stderr.
   config.active_support.deprecation = :stderr
+
+  # Speed up tests by lowering bcrypt's cost function -- Remove for production -- By Kyle Oct 8 2014
+  ActiveModel::SecurePassword.min_cost = true
 end
